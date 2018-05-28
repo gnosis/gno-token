@@ -1,5 +1,7 @@
 pragma solidity 0.4.10;
 
+import "StandardToken.sol";
+
 /// @title Gnosis token contract
 /// @author Stefan George - <stefan.george@consensys.net>
 contract GnosisToken is StandardToken {

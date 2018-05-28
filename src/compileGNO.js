@@ -1,8 +1,19 @@
 const compilerUtils = require('./util/compilerUtils')
+const path = require('path')
 
-const input = {
-	'lib.sol': 'library L { function f() returns (uint) { return 7; } }',
-	'cont.sol': 'import "lib.sol"; contract x { function g() { L.f(); } }'
+const LEGACY_CONTRACTS_DIR = path.join(__dirname, '..', 'contracts-legacy')
+
+async function loadSources () {
+  const fs = require('fs')
+  const sources = {}
+
+  fs.readdirSync(LEGACY_CONTRACTS_DIR).forEach(file => {
+    sources[file] = fs.readFileSync(path.join(LEGACY_CONTRACTS_DIR, file), {
+      encoding: 'utf8'
+    })
+  })
+
+  return sources
 }
 
 // GNO was deployed usign v0.4.10
@@ -11,9 +22,11 @@ const input = {
 const COMPILER_VERSION = 'v0.4.10+commit.f0d539ae'
 
 async function compile () {
+  const sources = await loadSources()
   // const solc = await compilerUtils.loadCompiler(COMPILER_VERSION)
   const solc = await compilerUtils.loadCompilerLocal(COMPILER_VERSION)
-  var output = solc.compile({ sources: input }, 1)
+  var output = solc.compile({ sources }, 1)
+  console.log(output)
 
   for (var contractName in output.contracts) {
     console.log(contractName + ': ' + output.contracts[contractName].bytecode)

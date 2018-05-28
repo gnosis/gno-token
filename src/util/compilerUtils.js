@@ -1,12 +1,6 @@
 const solc = require('solc')
 const path = require('path')
 
-const input = {
-	'lib.sol': 'library L { function f() returns (uint) { return 7; } }',
-	'cont.sol': 'import "lib.sol"; contract x { function g() { L.f(); } }'
-}
-const COMPILER_VERSION = 'v0.4.10+commit.f0d539ae'
-
 async function loadCompiler (version) {
   return new Promise((resolve, reject) => {
     solc.loadRemoteVersion(version, (err, solcLegacy) => {
