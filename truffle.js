@@ -1,20 +1,67 @@
-// See <http://truffleframework.com/docs/advanced/configuration>
-// to customize your Truffle configuration!
+const HDWalletProvider = require('truffle-hdwallet-provider')
 
-const config = {};
+const DEFAULT_GAS_PRICE = 1e9
+const GAS_LIMIT = 1e6
 
-const _ = require("lodash");
+// Get the mnemonic
+const mnemonic = process.env.MNEMONIC
+const gasPrice = process.env.GAS_PRICE || DEFAULT_GAS_PRICE
+const gas = GAS_LIMIT
 
-try {
-  _.merge(config, require("./truffle-local"));
-} catch (e) {
-  if (e.code === "MODULE_NOT_FOUND") {
-    // eslint-disable-next-line no-console
-    console.log("No local truffle config found. Using all defaults...");
-  } else {
-    // eslint-disable-next-line no-console
-    console.warn("Tried processing local config but got error:", e);
+// Allow to add an aditional network (useful for docker-compose setups)
+//  i.e. NETWORK='{ "name": "docker", "networkId": "99999", "url": "http://rpc:8545", "gas": "6700000", "gasPrice": "25000000000"  }'
+let aditionalNetwork = process.env.NETWORK ? JSON.parse(process.env.NETWORK) : null
+
+const networks = {
+  development: {
+    host: 'localhost',
+    port: 8545,
+    gas,
+    gasPrice,
+    network_id: '*'
+  },
+  live: {
+    provider: _getProvider('https://mainnet.infura.io/'),
+    network_id: '1',
+    gas,
+    gasPrice
+  },
+  kovan: {
+    provider: _getProvider('https://kovan.infura.io/'),
+    network_id: '42',
+    gas,
+    gasPrice
+  },
+  rinkeby: {
+    provider: _getProvider('http://node.rinkeby.gnosisdev.com:8545'),
+    network_id: '4',
+    gas,
+    gasPrice
+  },
+  mainnet: {
+    provider: _getProvider('https://mainnet.infura.io'),
+    network_id: '0',
+    gas,
+    gasPrice
   }
 }
 
-module.exports = config;
+if (aditionalNetwork) {
+  const { name, url, networkId, gas, gasPrice } = aditionalNetwork
+  networks[name] = {
+    provider: _getProvider(url),
+    network_id: networkId,
+    gas,
+    gasPrice
+  }
+}
+
+function _getProvider (url) {
+  return () => {
+    return new HDWalletProvider(mnemonic, url)
+  }
+}
+
+module.exports = {
+  networks
+}
