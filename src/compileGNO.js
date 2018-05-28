@@ -21,8 +21,15 @@ async function loadCompiler (version) {
   })
 }
 
+async function loadCompilerLocal (version) {
+  const solJsonFileName = 'soljson-' + version + '.js'
+  const solJsonPath = path.join(__dirname, '.', 'solc-compiler', solJsonFileName)
+  return solc.setupMethods(require(solJsonPath))
+}
+
 async function compile () {
-  const solc = await loadCompiler(COMPILER_VERSION)
+  // const solc = await loadCompiler(COMPILER_VERSION)
+  const solc = await loadCompilerLocal(COMPILER_VERSION)
   var output = solc.compile({ sources: input }, 1)
 
   for (var contractName in output.contracts) {
