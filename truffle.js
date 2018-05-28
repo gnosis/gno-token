@@ -63,5 +63,10 @@ function _getProvider (url) {
 }
 
 module.exports = {
-  networks
+  networks,
+  solc: {
+    optimizer: {
+      enabled: false
+    }
+  }
 }
