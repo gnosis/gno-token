@@ -13,17 +13,17 @@
   },
   "scripts": {
     "rpc": "ganache-cli -d --mnemonic 'candy maple cake sugar pudding cream honey rich smooth crumble sweet treat' --defaultBalanceEther '500'",
-    "prepack": "npm run contracts",
+    "prepack": "npm run restore",
     "test": "truffle test",
     "truffle": "truffle",
     "networks-extract": "node scripts/extract_network_info.js",
     "networks-inject": "node scripts/inject_network_info.js",
-    "networks-reset": "truffle networks --clean && node scripts/inject_network_info.js",
+    "networks-reset": "truffle networks --clean && npm run networks-inject",
     "networks": "truffle networks",
     "compile": "eslint . && standard --fix && truffle compile",
     "migrate-dependencies": "cd node_modules/@gnosis.pm/util-contracts && truffle migrate && cp ./build/contracts/* ../../../build/contracts",
     "migrate": "npm run migrate-dependencies && truffle migrate",
-    "contracts": "npm run compile && npm run networks-reset",
+    "restore": "npm run compile && npm run networks-reset",
     "lint": "eslint ."
   },
   "dependencies": {

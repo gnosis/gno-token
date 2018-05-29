@@ -2,6 +2,9 @@ const fs = require('fs')
 const path = require('path')
 const _ = require('lodash')
 
+// TODO: We should improve this script and leave then just in util-contracts
+// project, so we don't have to add it for every project
+
 const dir = path.join('build', 'contracts')
 
 try {
