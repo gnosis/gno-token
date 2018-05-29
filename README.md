@@ -17,6 +17,18 @@ yarn networks
 yarn restore
 ```
 
+## Execute migrations into a local ganache-cli
+```bash
+# Run ganache CLU
+yarn rpc
+
+# Execute the migrations for the dependencies
+yarn migrate-dependencies
+
+# Execute the migrations
+yarn migrate
+```
+
 ## Generate a new version
 ```bash
 # In a release branch (i.e. release/vX.Y.X)
