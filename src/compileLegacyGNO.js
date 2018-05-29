@@ -10,7 +10,6 @@ const COMPILER_VERSION = 'v0.4.10+commit.f0d539ae'
 const LEGACY_CONTRACTS_SOURCE_DIR = path.join(__dirname, '..', 'contracts-legacy')
 const LEGACY_CONTRACTS_BUILD_DIR = path.join(__dirname, '..', 'build', 'legacy-contracts')
 
-
 async function loadSources () {
   const sources = {}
 
@@ -23,9 +22,8 @@ async function loadSources () {
   return sources
 }
 
-
 async function compile () {
-  if (!fs.existsSync(LEGACY_CONTRACTS_BUILD_DIR)){
+  if (!fs.existsSync(LEGACY_CONTRACTS_BUILD_DIR)) {
     fs.mkdirSync(LEGACY_CONTRACTS_BUILD_DIR)
   }
 
@@ -37,12 +35,12 @@ async function compile () {
   var output = solc.compile({ sources }, 1)
   console.log('All sources were compiled')
   console.log(`Saving compiled contracts in ${LEGACY_CONTRACTS_BUILD_DIR}`)
-  
+
   const contractNames = Object.keys(output.contracts)
   contractNames.forEach(contractNameRaw => {
     const [ , contractName ] = contractNameRaw.split(':')
     const compiledContract = output.contracts[contractNameRaw]
-    
+
     const filePath = path.join(LEGACY_CONTRACTS_BUILD_DIR, contractName + '.json')
     console.log(`Writing compiled contract: ${contractName}`)
     fs.writeFileSync(filePath, JSON.stringify(compiledContract))
