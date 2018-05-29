@@ -9,9 +9,9 @@ module.exports = function (deployer) {
   return Math
     .deployed()
     .then(math => {
-      deployer.link(Math, TokenGNO)
+      return deployer.link(Math, TokenGNO)
     })
     .then(() => {
-      deployer.deploy(TokenGNO, INITIAL_TOKEN_AMOUNT * 1e18)
+      return deployer.deploy(TokenGNO, INITIAL_TOKEN_AMOUNT * 1e18)
     })
 }
