@@ -1,9 +1,18 @@
 {
+  "name": "@gnosis.pm/gno-token",
+  "version": "0.1.0",
+  "description": "The GNO token and related smart contracts",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/gnosis/gno-token/issues"
+  },
+  "homepage": "https://github.com/gnosis/gno-token#readme",
   "directories": {
     "lib": "contracts",
     "test": "test"
   },
   "scripts": {
+    "rpc": "ganache-cli -d --mnemonic 'candy maple cake sugar pudding cream honey rich smooth crumble sweet treat' --defaultBalanceEther '500'",
     "prepack": "npm run contracts",
     "test": "truffle test",
     "truffle": "truffle",
@@ -12,14 +21,18 @@
     "networks-reset": "truffle networks --clean && node scripts/inject_network_info.js",
     "networks": "truffle networks",
     "compile": "eslint . && standard --fix && truffle compile",
-    "deploy": "truffle deploy",
+    "migrate-dependencies": "cd node_modules/@gnosis.pm/util-contracts && truffle migrate && cp ./build/contracts/* ../../../build/contracts",
+    "migrate": "npm run migrate-dependencies && truffle migrate",
     "contracts": "npm run compile && npm run networks-reset",
     "lint": "eslint ."
   },
-  "devDependencies": {
+  "dependencies": {
+    "@gnosis.pm/util-contracts": "^0.2.2"
+  },
+  "devDependencies": {    
     "eslint": "^4.19.1",
-    "eslint-plugin-import": "^2.11.0",
     "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-node": "^6.0.0",
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.1.0",
