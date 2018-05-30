@@ -1,11 +1,16 @@
 /* global artifacts */
 /* eslint no-undef: "error" */
-const Math = artifacts.require('Math')
-const TokenGNO = artifacts.require('TokenGNO')
+const contract = require('truffle-contract')
 
-const INITIAL_TOKEN_AMOUNT = 100000 // 100K
+// const Math = artifacts.require('Math')
+const TokenGNO = artifacts.require('TokenGNO')
+const Math = contract(require('@gnosis.pm/util-contracts/build/contracts/Math'))
+
+const INITIAL_TOKEN_AMOUNT = 10e6 // 10M
 
 module.exports = function (deployer) {
+  Math.setProvider(deployer.provider)
+
   return Math
     .deployed()
     .then(math => {

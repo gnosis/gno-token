@@ -1,32 +1,18 @@
 {
-  "Math": {
-    "4": {
-      "events": {},
-      "links": {},
-      "address": "0xc7168757a32cad0f969dfbba5c7b741355b97177",
-      "transactionHash": "0xfdec5a39d0c0ea91f0384a346b7c4c47fb724720e8dd705378c6cb4cae10aa2e"
-    },
-    "1527618120986": {
-      "events": {},
-      "links": {},
-      "address": "0x345ca3e014aaf5dca488057592ee47305d9b3e10",
-      "transactionHash": null
-    }
-  },
   "Migrations": {
     "4": {
       "events": {},
       "links": {},
-      "address": "0xb8dfeba5ad22003be290aaeca023b50b111e01b3",
-      "transactionHash": "0x1e337480d768d13250ec0edab103e46d58b43bf1c019b2d8c32252d283dab91a"
+      "address": "0x63f8c9175f87689e03334d622a33493fd4fa0107",
+      "transactionHash": "0x63a7dbcab721d14ee1a0a82c60be2d6200be3f73a11ebe600f049964e31daf4b"
     }
   },
   "TokenGNO": {
     "4": {
       "events": {},
       "links": {},
-      "address": "0x45725d5dd61b3ff35945bb8ec95b343d2baa81fe",
-      "transactionHash": "0x4a0ee307b7d864c170a559330045d42bcc95075f60ed167bedb6d2f1c5152e64"
+      "address": "0xa8a83ab6627a6c98f9546cee49a5d866837a1c4e",
+      "transactionHash": "0x1533a5b808ca967f08064eaa581c8e1206d40248087ca426e499528c414246b9"
     }
   }
 }

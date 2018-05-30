@@ -23,8 +23,7 @@
     "compile-legacy": "node src/compileLegacyGNO.js",
     "compile": "eslint --fix . && eslint . && truffle compile && npm run compile-legacy",
     "restore": "npm run compile && npm run networks-reset",
-    "migrate-util-contracts": "cd node_modules/@gnosis.pm/util-contracts && npm run migrate",
-    "migrate-dependencies": "npm run migrate-util-contracts && npm run restore-dependencies",
+    "migrate-dependencies": "cd node_modules/@gnosis.pm/util-contracts && npm run migrate",
     "migrate": "truffle migrate",
     "lint": "eslint ."
   },
@@ -41,6 +40,7 @@
     "lodash": "^4.17.5",
     "truffle": "^4.1.11",
     "truffle-contract": "^3.0.5",
+    "truffle-flattener": "^1.2.5",
     "truffle-hdwallet-provider": "^0.0.5"
   }
 }
