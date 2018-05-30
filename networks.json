@@ -14,6 +14,18 @@
     }
   },
   "TokenGNO": {
+    "0": {
+      "events": {},
+      "links": {},
+      "address": "0x6810e776880c02933d47db1b9fc05908e5386b96",
+      "transactionHash": "0xa7838a091c7daa3033ec59a3f13bd8dc5b4c69d3b3ab33f486d06faae72a1606"
+    },
+    "1": {
+      "events": {},
+      "links": {},
+      "address": "0x6810e776880c02933d47db1b9fc05908e5386b96",
+      "transactionHash": "0xa7838a091c7daa3033ec59a3f13bd8dc5b4c69d3b3ab33f486d06faae72a1606"
+    },
     "4": {
       "events": {},
       "links": {},
