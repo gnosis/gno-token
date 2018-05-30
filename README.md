@@ -3,7 +3,7 @@ The GNO token and related smart contracts.
 
 The token and contract can be in **Etherscan**:
 
-* **Rinkeby**: [https://rinkeby.etherscan.io/token/0x45725d5dd61b3ff35945bb8ec95b343d2baa81fe]()
+* **Rinkeby**: [https://rinkeby.etherscan.io/token/0xa8a83ab6627a6c98f9546cee49a5d866837a1c4e]()
 * **Mainnet**: [https://etherscan.io/token/0x6810e776880c02933d47db1b9fc05908e5386b96]()
 
 ## Setup and show the networks
@@ -42,6 +42,9 @@ MNEMONIC=$MNEMONIC_GNO yarn migrate --network rinkeby
 # Extract the network file
 yarn networks-extract
 
+# Verify the contract in Etherscan
+# Folow the steps in "Verify contract"
+
 # Commit the network file
 git add network.json
 git commit -m 'Update the networks file'
@@ -67,8 +70,9 @@ npx truffle-flattener contracts/TokenGNO.sol > build/TokenGNO-EtherScan.sol
 ```
 
 Go to Etherscan validation page:
-* [https://rinkeby.etherscan.io/verifyContract?a=0x45725d5dd61b3ff35945bb8ec95b343d2baa81fe]()
-
-
-Upload `build/TokenGNO-EtherScan.sol` and set:
-* 
+* Go to[https://rinkeby.etherscan.io/verifyContract?a=]()
+* Fill the information:
+  * Use `build/TokenGNO-EtherScan.sol`
+  * Set the exact compiler version used for the compilation i.e. `v0.4.24+commit.e67f0147`
+  * Optimization: `No`
+* Press validate
