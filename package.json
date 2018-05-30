@@ -16,22 +16,20 @@
     "prepack": "npm run restore",
     "test": "truffle test",
     "truffle": "truffle",
-    "networks-extract": "node scripts/extract_network_info.js",
-    "networks-inject": "node scripts/inject_network_info.js",
-    "networks-reset": "truffle networks --clean && npm run networks-inject",
+    "networks-extract": "node src/extract_network_info.js",
+    "networks-inject": "node src/inject_network_info.js",
+    "networks-reset": "mkdir -p build/contracts && truffle networks --clean && npm run networks-inject",
     "networks": "truffle networks",
     "compile-legacy": "node src/compileLegacyGNO.js",
-    "compile": "eslint --fix . && eslint . && truffle compile",
-    "restore-util-contracts": "source ./scripts/restore_util_contracts.sh",
-    "restore-dependencies": "npm run restore-util-contracts && npm run networks-inject",
-    "restore": "npm run restore-dependencies && npm run compile && npm run networks-reset",
+    "compile": "eslint --fix . && eslint . && truffle compile && npm run compile-legacy",
+    "restore": "npm run compile && npm run networks-reset",
     "migrate-util-contracts": "cd node_modules/@gnosis.pm/util-contracts && npm run migrate",
     "migrate-dependencies": "npm run migrate-util-contracts && npm run restore-dependencies",
     "migrate": "truffle migrate",
     "lint": "eslint ."
   },
   "dependencies": {
-    "@gnosis.pm/util-contracts": "^0.2.3"
+    "@gnosis.pm/util-contracts": "^0.2.5"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
