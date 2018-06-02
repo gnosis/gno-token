@@ -24,7 +24,7 @@
     "compile": "eslint --fix . && eslint . && truffle compile && npm run compile-legacy",
     "restore": "npm run compile && npm run networks-reset",
     "postinstall": "npm install @gnosis.pm/util-contracts truffle-hdwallet-provider",
-    "migrate-dependencies": "cd node_modules/@gnosis.pm/util-contracts && npm run migrate",
+    "migrate-dep": "cd node_modules/@gnosis.pm/util-contracts && npm run migrate",
     "migrate": "truffle migrate",
     "lint": "eslint ."
   },

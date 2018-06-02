@@ -12,11 +12,11 @@ The token and contract can be in **Etherscan**:
 # Install dependencies
 yarn install
 
-# Show current network addresses
-yarn networks
-
 # Compile and restore the network addresses
 yarn restore
+
+# Show current network addresses
+yarn networks
 ```
 
 ## Execute migrations into a local ganache-cli
@@ -25,7 +25,7 @@ yarn restore
 yarn rpc
 
 # Execute the migrations for the dependencies
-yarn migrate-dependencies
+yarn migrate-dep
 
 # Execute the migrations
 yarn migrate
