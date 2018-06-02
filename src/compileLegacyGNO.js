@@ -35,17 +35,24 @@ async function compile () {
   var output = solc.compile({ sources }, 1)
   console.log('All sources were compiled')
   console.log(`Saving compiled contracts in ${LEGACY_CONTRACTS_BUILD_DIR}`)
+  if (output.errors) {
+    output.errors.forEach(error => {
+      console.error(error)
+    })
+    process.exit(1)
+    // TODO: Just set the exit code, do not exit
+  } else {
+    const contractNames = Object.keys(output.contracts)
+    contractNames.forEach(contractNameRaw => {
+      const [ , contractName ] = contractNameRaw.split(':')
+      const compiledContract = output.contracts[contractNameRaw]
 
-  const contractNames = Object.keys(output.contracts)
-  contractNames.forEach(contractNameRaw => {
-    const [ , contractName ] = contractNameRaw.split(':')
-    const compiledContract = output.contracts[contractNameRaw]
-
-    const filePath = path.join(LEGACY_CONTRACTS_BUILD_DIR, contractName + '.json')
-    console.log(`Writing compiled contract: ${contractName}`)
-    fs.writeFileSync(filePath, JSON.stringify(compiledContract))
-  })
-  console.log('All compiled contracts were generated')
+      const filePath = path.join(LEGACY_CONTRACTS_BUILD_DIR, contractName + '.json')
+      console.log(`Writing compiled contract: ${contractName}`)
+      fs.writeFileSync(filePath, JSON.stringify(compiledContract))
+    })
+    console.log('All compiled contracts were generated')
+  }
 }
 
 // Compile contracts
