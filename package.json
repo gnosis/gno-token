@@ -1,6 +1,6 @@
 {
   "name": "@gnosis.pm/gno-token",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "The GNO token and related smart contracts",
   "license": "GPL-3.0",
   "bugs": {
