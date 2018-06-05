@@ -9,8 +9,8 @@ const NETWORKS_FILE_PATH = path.join(BASE_DIR, 'networks.json')
 //   path.join(BASE_DIR, 'node_modules/@gnosis.pm/util-contracts/build/contracts')
 
 module.exports = {
-  buildDir: BUILD_DIR,
-  networksFile: NETWORKS_FILE_PATH,
+  buildPath: BUILD_DIR,
+  networkFilePath: NETWORKS_FILE_PATH,
   buildDirDependencies: []
   // buildDirDependencies: [
   //   BUILD_DIR_UTIL_CONTRACTS
