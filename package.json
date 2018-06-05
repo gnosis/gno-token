@@ -26,10 +26,11 @@
     "postinstall": "npm install @gnosis.pm/util-contracts truffle-hdwallet-provider",
     "migrate-dep": "cd node_modules/@gnosis.pm/util-contracts && npm run migrate",
     "migrate": "truffle migrate",
+    "migrate-all": "npm run migrate-dep && npm run migrate",
     "lint": "eslint ."
   },
   "dependencies": {
-    "@gnosis.pm/util-contracts": "^0.2.10"
+    "@gnosis.pm/util-contracts": "^0.2.12"
   },
   "devDependencies": {
     "eslint": "^4.19.1",

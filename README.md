@@ -36,8 +36,7 @@ yarn migrate
 # In a release branch (i.e. release/vX.Y.X)
 # Migrate the version to the testnets, at least rinkeby, and posibly mainnet
 # You can optionally change the gas price using the GAS_PRICE env variable
-yarn compile
-yarn networks-inject
+yarn restore
 MNEMONIC=$MNEMONIC_GNO yarn migrate --network rinkeby
 
 # Extract the network file
