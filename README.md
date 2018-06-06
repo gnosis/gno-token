@@ -3,9 +3,9 @@ The GNO token and related smart contracts.
 
 The token and contract can be in **Etherscan**:
 
-* **Mainnet**: [https://etherscan.io/token/0x6810e776880c02933d47db1b9fc05908e5386b96]()
-* **Rinkeby**: [https://rinkeby.etherscan.io/token/0xa8a83ab6627a6c98f9546cee49a5d866837a1c4e]()
-* **Kovan**: [https://kovan.etherscan.io/token/0x6018bf616ec9db02f90c8c8529ddadc10a5c29dc]()
+* **Mainnet**: https://etherscan.io/token/0x6810e776880c02933d47db1b9fc05908e5386b96
+* **Rinkeby**: https://rinkeby.etherscan.io/token/0xa8a83ab6627a6c98f9546cee49a5d866837a1c4e
+* **Kovan**: https://kovan.etherscan.io/token/0x6018bf616ec9db02f90c8c8529ddadc10a5c29dc
 
 ## Setup and show the networks
 ```bash

@@ -23,14 +23,17 @@
     "compile-legacy": "node src/compileLegacyGNO.js",
     "compile": "eslint --fix . && eslint . && truffle compile && npm run compile-legacy",
     "restore": "npm run compile && npm run networks-reset",
-    "postinstall": "npm install @gnosis.pm/util-contracts truffle-hdwallet-provider",
+    "postinstall-old": "npm install @gnosis.pm/util-contracts truffle-hdwallet-provider",
     "migrate-dep": "cd node_modules/@gnosis.pm/util-contracts && npm run migrate",
     "migrate": "truffle migrate",
     "migrate-all": "npm run migrate-dep && npm run migrate",
     "lint": "eslint ."
   },
   "dependencies": {
-    "@gnosis.pm/util-contracts": "^0.2.13"
+    "@gnosis.pm/util-contracts": "^0.2.13",
+    "truffle": "4.1.5",
+    "truffle-contract": "^3.0.5",
+    "truffle-hdwallet-provider": "^0.0.5"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
@@ -38,11 +41,7 @@
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-node": "^6.0.0",
     "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.1.0",
-    "ganache-cli": "^6.1.0",
-    "truffle": "4.1.5",
-    "truffle-contract": "^3.0.5",
-    "truffle-flattener": "^1.2.5",
-    "truffle-hdwallet-provider": "^0.0.5"
+    "eslint-plugin-standard": "^3.1.0",    
+    "truffle-flattener": "^1.2.5"    
   }
 }
