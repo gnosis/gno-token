@@ -1,6 +1,6 @@
 {
   "name": "@gnosis.pm/gno-token",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "The GNO token and related smart contracts",
   "license": "GPL-3.0",
   "bugs": {
@@ -41,7 +41,7 @@
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-node": "^6.0.0",
     "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.1.0",    
-    "truffle-flattener": "^1.2.5"    
+    "eslint-plugin-standard": "^3.1.0",
+    "truffle-flattener": "^1.2.5"
   }
 }
