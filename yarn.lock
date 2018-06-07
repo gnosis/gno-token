@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@gnosis.pm/util-contracts@^0.2.14":
-  version "0.2.14"
-  resolved "https://registry.yarnpkg.com/@gnosis.pm/util-contracts/-/util-contracts-0.2.14.tgz#587cd6268a7d08dbc0d08b1c7bd375e19549d833"
+"@gnosis.pm/util-contracts@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@gnosis.pm/util-contracts/-/util-contracts-0.3.0.tgz#cf47a0a741758d8bf498b1344795f95af032dde9"
 
 abstract-leveldown@~2.6.0:
   version "2.6.3"

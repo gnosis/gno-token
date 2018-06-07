@@ -23,14 +23,13 @@
     "compile-legacy": "node src/compileLegacyGNO.js",
     "compile": "eslint --fix . && eslint . && truffle compile && npm run compile-legacy",
     "restore": "npm run compile && npm run networks-reset",
-    "postinstall": "npm install @gnosis.pm/util-contracts truffle-hdwallet-provider",
     "migrate-dep": "cd node_modules/@gnosis.pm/util-contracts && npm run migrate",
     "migrate": "truffle migrate",
     "migrate-all": "npm run migrate-dep && npm run migrate",
     "lint": "eslint ."
   },
   "dependencies": {
-    "@gnosis.pm/util-contracts": "^0.2.14",
+    "@gnosis.pm/util-contracts": "^0.3.0",
     "truffle-contract": "^3.0.5",
     "truffle-hdwallet-provider": "^0.0.5"
   },
