@@ -27,11 +27,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@gnosis.pm/util-contracts": "^0.4.0"
+    "@gnosis.pm/util-contracts": "^0.4.1"
   },
-  "devDependencies": {
-    "truffle-contract": "^3.0.5",
-    "truffle-hdwallet-provider": "^0.0.5",
+  "devDependencies": {    
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.11.0",
@@ -39,6 +37,8 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.1.0",
     "truffle": "4.1.5",
-    "truffle-flattener": "^1.2.5"
+    "truffle-flattener": "^1.2.5",
+    "truffle-contract": "^3.0.5",
+    "truffle-hdwallet-provider": "^0.0.5"
   }
 }
