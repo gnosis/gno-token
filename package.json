@@ -1,6 +1,6 @@
 {
   "name": "@gnosis.pm/gno-token",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "The GNO token and related smart contracts",
   "license": "GPL-3.0",
   "bugs": {
@@ -29,7 +29,7 @@
   "dependencies": {
     "@gnosis.pm/util-contracts": "^0.4.1"
   },
-  "devDependencies": {    
+  "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.11.0",
