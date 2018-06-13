@@ -17,5 +17,7 @@ module.exports = truffleConfig({
   mnemonic,
   gasPriceGWei,
   gas,
+  urlMainnet: 'https://node-green.mainnet.gnosis.pm',
+  urlRinkeby: 'https://rinkeby.infura.io/', // 'http://node.rinkeby.gnosisdev.com:8545'
   aditionalNetwork
 })

@@ -1,5 +1,11 @@
 {
   "Migrations": {
+    "1": {
+      "events": {},
+      "links": {},
+      "address": "0xf54b632aacc7c660bc0e6b95ddc88829dfbe562e",
+      "transactionHash": "0x28ea5fffe4edab865bb46e2818bdd44997243489a02a6b4e3167e942d986799f"
+    },
     "4": {
       "events": {},
       "links": {},
