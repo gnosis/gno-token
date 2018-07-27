@@ -73,3 +73,6 @@ Go to Etherscan validation page:
   * Set the exact compiler version used for the compilation i.e. `v0.4.24+commit.e67f0147`
   * Optimization: `No`
 * Press validate
+
+## License
+[LGPL v3](./LICENSE)
