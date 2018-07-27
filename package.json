@@ -1,6 +1,6 @@
 {
   "name": "@gnosis.pm/gno-token",
-  "version": "0.6.0",
+  "version": "1.0.2",
   "description": "The GNO token and related smart contracts",
   "license": "LGPL-3.0",
   "bugs": {
@@ -16,8 +16,8 @@
     "preversion": "npm run restore",
     "test": "truffle test",
     "truffle": "truffle",
-    "networks-extract": "node src/extract_network_info.js",
-    "networks-inject": "node src/inject_network_info.js",
+    "networks-extract": "truffle networks --clean && node src/extract_network_info.js",
+    "networks-inject": "truffle networks --clean && node src/inject_network_info.js",
     "networks-reset": "mkdir -p build/contracts && truffle networks --clean && npm run networks-inject",
     "networks": "truffle networks",
     "compile-legacy": "node src/compileLegacyGNO.js",
@@ -27,11 +27,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@gnosis.pm/util-contracts": "^0.4.0"
+    "@gnosis.pm/util-contracts": "^1.0.1"
   },
   "devDependencies": {
-    "truffle-contract": "^3.0.5",
-    "truffle-hdwallet-provider": "^0.0.5",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.11.0",
@@ -39,6 +37,8 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.1.0",
     "truffle": "4.1.5",
-    "truffle-flattener": "^1.2.5"
+    "truffle-flattener": "^1.2.5",
+    "truffle-contract": "^3.0.5",
+    "truffle-hdwallet-provider": "^0.0.5"
   }
 }

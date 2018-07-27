@@ -24,9 +24,6 @@ yarn networks
 # Run ganache CLU
 yarn rpc
 
-# Execute the migrations for the dependencies
-yarn migrate-dep
-
 # Execute the migrations
 yarn migrate
 ```
@@ -35,7 +32,7 @@ yarn migrate
 ```bash
 # In a release branch (i.e. release/vX.Y.X)
 # Migrate the version to the testnets, at least rinkeby, and posibly mainnet
-# You can optionally change the gas price using the GAS_PRICE env variable
+# You can optionally change the gas price using the GAS_PRICE_GWEI env variable
 yarn restore
 MNEMONIC=$MNEMONIC_GNO yarn migrate --network rinkeby
 
@@ -76,3 +73,6 @@ Go to Etherscan validation page:
   * Set the exact compiler version used for the compilation i.e. `v0.4.24+commit.e67f0147`
   * Optimization: `No`
 * Press validate
+
+## License
+[LGPL v3](./LICENSE)
