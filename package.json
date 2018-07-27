@@ -2,7 +2,7 @@
   "name": "@gnosis.pm/gno-token",
   "version": "1.0.1",
   "description": "The GNO token and related smart contracts",
-  "license": "GPL-3.0",
+  "license": "LGPL-3",
   "bugs": {
     "url": "https://github.com/gnosis/gno-token/issues"
   },
