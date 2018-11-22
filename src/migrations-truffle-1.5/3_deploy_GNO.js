@@ -5,8 +5,10 @@ async function migrate ({
   deployer,
   network,
   accounts,
-  initialTokenAmount = INITIAL_TOKEN_AMOUNT
+  initialTokenAmount = INITIAL_TOKEN_AMOUNT,
+  web3
 }) {
+  const BN = web3.utils.BN
   const TokenGNO = artifacts.require('TokenGNO')
   const { Math } = _getDependencies(artifacts, network, deployer)
 
@@ -18,7 +20,11 @@ async function migrate ({
   console.log('Deploy TokenGNO:')
   console.log('  - Owner: %s', owner)
   console.log('  - Initial token amount: %s', initialTokenAmount)
-  return deployer.deploy(TokenGNO, initialTokenAmount * 1e18)
+  const initialTokenAmountWei = web3.utils.toWei(
+    new BN(initialTokenAmount),
+    'ether'
+  )
+  return deployer.deploy(TokenGNO, initialTokenAmountWei)
 }
 
 function _getDependencies (artifacts, network, deployer) {
