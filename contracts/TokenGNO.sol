@@ -1,8 +1,8 @@
 pragma solidity ^0.4.21;
 
-import "@gnosis.pm/util-contracts/contracts/StandardToken.sol";
+import "@gnosis.pm/util-contracts/contracts/GnosisStandardToken.sol";
 
-contract TokenGNO is StandardToken {
+contract TokenGNO is GnosisStandardToken {
     string public constant symbol = "GNO";
     string public constant name = "Gnosis";
     uint8 public constant decimals = 18;
