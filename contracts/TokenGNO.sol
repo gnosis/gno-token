@@ -7,9 +7,7 @@ contract TokenGNO is GnosisStandardToken {
     string public constant name = "Gnosis";
     uint8 public constant decimals = 18;
 
-    function TokenGNO(
-    	uint amount
-    )
+    constructor (uint amount)
     	public 
     {
         totalTokens = amount;
