@@ -1,4 +1,4 @@
-const migrateUtils = require('@gnosis.pm/util-contracts/src/migrations')
+const migrateUtils = require('@gnosis.pm/util-contracts/src/migrations-truffle-4')
 
 function migrate ({
   artifacts,
