@@ -1,4 +1,13 @@
+sudo: required
+dist: trusty
 language: node_js
 node_js:
-  - "node"
-  - "8"
+  - '8'
+before_install:
+  - rm -rf node_modules
+  - npm install -g ganache-cli
+install:
+  - npm install
+before_script:
+  - ganache-cli --defaultBalanceEther 500000000 > /dev/null &
+  - sleep 5
