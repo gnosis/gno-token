@@ -21,7 +21,7 @@
     "networks-reset": "mkdir -p build/contracts && truffle networks --clean && npm run networks-inject",
     "networks": "truffle networks",
     "compile-legacy": "node src/compileLegacyGNO.js",
-    "compile": "eslint --fix . && eslint . && truffle compile && npm run compile-legacy",
+    "compile": "eslint --fix . && eslint . && truffle compile",
     "restore": "rm -rf build && npm run compile && npm run networks-reset",
     "migrate": "truffle migrate",
     "lint": "eslint .",
