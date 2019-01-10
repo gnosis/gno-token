@@ -1,6 +1,6 @@
 {
   "name": "@gnosis.pm/gno-token",
-  "version": "1.2.0-RC4",
+  "version": "1.2.0-RC6",
   "description": "The GNO token and related smart contracts",
   "license": "LGPL-3.0",
   "bugs": {
@@ -40,6 +40,6 @@
     "truffle-hdwallet-provider": "^1.0.0-web3one.1"
   },
   "dependencies": {
-    "@gnosis.pm/util-contracts": "1.2.0-RC4"
+    "@gnosis.pm/util-contracts": "1.2.0-RC6"
   }
 }
