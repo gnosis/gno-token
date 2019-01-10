@@ -1,16 +1,17 @@
-pragma solidity ^0.5.0;
+pragma solidity 0.4.10;
 
 import "StandardToken.sol";
 
 /// @title Gnosis token contract
 /// @author Stefan George - <stefan.george@consensys.net>
 contract GnosisToken is StandardToken {
+
     /*
      *  Token meta data
      */
-    string public constant name = "Gnosis Token";
-    string public constant symbol = "GNO";
-    uint8 public constant decimals = 18;
+    string constant public name = "Gnosis Token";
+    string constant public symbol = "GNO";
+    uint8 constant public decimals = 18;
 
     /*
      *  Public functions
@@ -19,20 +20,25 @@ contract GnosisToken is StandardToken {
     /// @param dutchAuction Address of dutch auction contract.
     /// @param owners Array of addresses receiving preassigned tokens.
     /// @param tokens Array of preassigned token amounts.
-    function GnosisToken(address dutchAuction, address[] memory owners, uint[] memory tokens) public {
-        if (dutchAuction == 0) // Address should not be null.
-        throw;
-        totalSupply = 10000000 * 10 ** 18;
-        balances[dutchAuction] = 9000000 * 10 ** 18;
+    function GnosisToken(address dutchAuction, address[] owners, uint[] tokens)
+        public
+    {
+        if (dutchAuction == 0)
+            // Address should not be null.
+            throw;
+        totalSupply = 10000000 * 10**18;
+        balances[dutchAuction] = 9000000 * 10**18;
         Transfer(0, dutchAuction, balances[dutchAuction]);
         uint assignedTokens = balances[dutchAuction];
-        for (uint i = 0; i < owners.length; i++) {
-            if (owners[i] == 0) // Address should not be null.
-            throw;
+        for (uint i=0; i<owners.length; i++) {
+            if (owners[i] == 0)
+                // Address should not be null.
+                throw;
             balances[owners[i]] += tokens[i];
             Transfer(0, owners[i], tokens[i]);
             assignedTokens += tokens[i];
         }
-        if (assignedTokens != totalSupply) throw;
+        if (assignedTokens != totalSupply)
+            throw;
     }
 }

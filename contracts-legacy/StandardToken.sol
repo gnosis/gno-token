@@ -1,14 +1,15 @@
-pragma solidity ^0.5.0;
+pragma solidity 0.4.10;
 
 import "Token.sol";
 
 /// @title Standard token contract - Standard token interface implementation.
 contract StandardToken is Token {
+
     /*
      *  Data structures
      */
-    mapping(address => uint256) balances;
-    mapping(address => mapping(address => uint256)) allowed;
+    mapping (address => uint256) balances;
+    mapping (address => mapping (address => uint256)) allowed;
     uint256 public totalSupply;
 
     /*
@@ -18,7 +19,10 @@ contract StandardToken is Token {
     /// @param _to Address of token receiver.
     /// @param _value Number of tokens to transfer.
     /// @return Returns success of function call.
-    function transfer(address _to, uint256 _value) public returns (bool) {
+    function transfer(address _to, uint256 _value)
+        public
+        returns (bool)
+    {
         if (balances[msg.sender] < _value) {
             // Balance too low
             throw;
@@ -34,7 +38,10 @@ contract StandardToken is Token {
     /// @param _to Address to where tokens are sent.
     /// @param _value Number of tokens to transfer.
     /// @return Returns success of function call.
-    function transferFrom(address _from, address _to, uint256 _value) public returns (bool) {
+    function transferFrom(address _from, address _to, uint256 _value)
+        public
+        returns (bool)
+    {
         if (balances[_from] < _value || allowed[_from][msg.sender] < _value) {
             // Balance or allowance too low
             throw;
@@ -50,7 +57,10 @@ contract StandardToken is Token {
     /// @param _spender Address of allowed account.
     /// @param _value Number of approved tokens.
     /// @return Returns success of function call.
-    function approve(address _spender, uint256 _value) public returns (bool) {
+    function approve(address _spender, uint256 _value)
+        public
+        returns (bool)
+    {
         allowed[msg.sender][_spender] = _value;
         Approval(msg.sender, _spender, _value);
         return true;
@@ -63,14 +73,22 @@ contract StandardToken is Token {
     /// @param _owner Address of token owner.
     /// @param _spender Address of token spender.
     /// @return Returns remaining allowance for spender.
-    function allowance(address _owner, address _spender) public view returns (uint256) {
+    function allowance(address _owner, address _spender)
+        constant
+        public
+        returns (uint256)
+    {
         return allowed[_owner][_spender];
     }
 
     /// @dev Returns number of tokens owned by given address.
     /// @param _owner Address of token owner.
     /// @return Returns balance of owner.
-    function balanceOf(address _owner) public view returns (uint256) {
+    function balanceOf(address _owner)
+        constant
+        public
+        returns (uint256)
+    {
         return balances[_owner];
     }
 }
