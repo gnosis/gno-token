@@ -24,7 +24,8 @@
     "compile": "eslint --fix . && eslint . && truffle compile && npm run compile-legacy",
     "restore": "rm -rf build && npm run compile && npm run networks-reset",
     "migrate": "truffle migrate",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prettier": "prettier --write --tab-width 4 --print-width 120 '**/*.sol'"
   },
   "devDependencies": {
     "dotenv": "^6.1.0",
