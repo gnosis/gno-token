@@ -28,7 +28,7 @@
     "prettier": "prettier --write --tab-width 4 --print-width 120 '**/*.sol'"
   },
   "devDependencies": {
-    "dotenv": "^6.1.0",
+    "dotenv": "^6.2.0",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.11.0",
@@ -36,14 +36,14 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.1.0",
     "prettier": "^1.15.3",
-    "prettier-plugin-solidity-refactor": "^1.0.0-alpha.12",
+    "prettier-plugin-solidity-refactor": "^1.0.0-alpha.14",
     "solc": "0.5.2",
-    "truffle": "^5.0.0-beta.2",
+    "truffle": "^5.0.2",
     "truffle-contract": "^3.0.6",
     "truffle-flattener": "^1.2.5",
-    "truffle-hdwallet-provider": "^1.0.0-web3one.1"
+    "truffle-hdwallet-provider": "^1.0.2"
   },
   "dependencies": {
-    "@gnosis.pm/util-contracts": "2.0.0-RC1"
+    "@gnosis.pm/util-contracts": "2.0.0-RC2"
   }
 }
