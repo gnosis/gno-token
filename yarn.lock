@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@gnosis.pm/util-contracts@2.0.0-RC1":
-  version "2.0.0-RC1"
-  resolved "https://registry.yarnpkg.com/@gnosis.pm/util-contracts/-/util-contracts-2.0.0-RC1.tgz#871a5e049f6fbe29522480a0f5d70f999ffdf148"
-  integrity sha512-yUsAo+W1jki9e8wP5r//BJ9t9I9QiDNcxd+wGFJ8jSdzDWqkR6r3ur0ER4MzO51eL9uU0wEdpePkJK2jViVsag==
+"@gnosis.pm/util-contracts@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@gnosis.pm/util-contracts/-/util-contracts-2.0.0.tgz#562b14a2d6cb4a59189476dd0f6aaeba5f65abe2"
+  integrity sha512-vRgTV36d4ZFdcetKcNbnAtSDrP3OSWEj8YmG3RHK4DBMulPX2asRh8VnopTrZnZQ8enZIDbT1pT7buW+UJqd4g==
 
 acorn-jsx@^3.0.0:
   version "3.0.1"
@@ -405,7 +405,7 @@ doctrine@^2.1.0:
   dependencies:
     esutils "^2.0.2"
 
-dotenv@^6.1.0:
+dotenv@^6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-6.2.0.tgz#941c0410535d942c8becf28d3f357dbd9d476064"
   integrity sha512-HygQCKUBSFl8wKQZBSemMywRWcEDNidvNbjGVyZu3nbZ8qq9ubiPoGLMdRDpfSrpkkm9BXYFkpKxxFX38o/76w==
@@ -1392,16 +1392,16 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
-prettier-plugin-solidity-refactor@^1.0.0-alpha.12:
-  version "1.0.0-alpha.12"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-solidity-refactor/-/prettier-plugin-solidity-refactor-1.0.0-alpha.12.tgz#1163e07d03d607b615912957a32c1f1bea9e40e1"
-  integrity sha512-8JnVyJF4xkpjHhN93Ma+FPhQSJtJ2TDAxDuefo5Eta0edDJB1SNFsILmaxZLKqoUoxZ6rFrf+Di4qraHMtLD9w==
+prettier-plugin-solidity-refactor@^1.0.0-alpha.14:
+  version "1.0.0-alpha.14"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-solidity-refactor/-/prettier-plugin-solidity-refactor-1.0.0-alpha.14.tgz#f57435aa6700d37436a28309c8ae8229df1c06fc"
+  integrity sha512-jYF5IQbs+SvmiIy5jmNMEXHF+jl7Y4Kc5KlOYPqPY/4A/BPysFSewXdJYLAky+9keaSdQCaAXXHopSzlB8Yf6Q==
   dependencies:
     emoji-regex "^7.0.3"
     escape-string-regexp "^1.0.5"
     extract-comments "^1.1.0"
     prettier "^1.15.3"
-    solidity-parser-antlr "^0.3.3"
+    solidity-parser-antlr "^0.4.0"
     string-width "^3.0.0"
 
 prettier@^1.15.3:
@@ -1625,10 +1625,10 @@ solc@0.5.2:
     tmp "0.0.33"
     yargs "^11.0.0"
 
-solidity-parser-antlr@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/solidity-parser-antlr/-/solidity-parser-antlr-0.3.3.tgz#0352e35f914095daa7eef9f3a55cf8074e28cc5b"
-  integrity sha512-RNUc18pjf7DLWs//WF+V+VnvrbetEbNFUYxm2JFbXU62G9WSu+nVyDxV5r+FG4wu8jom17vLdM/3I7bMBGfZ9g==
+solidity-parser-antlr@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/solidity-parser-antlr/-/solidity-parser-antlr-0.4.0.tgz#005f38c396ca23cf7aada9b1a10d875176788201"
+  integrity sha512-RrIsh5VoHmrMQia6yLY8u8rx3JPREhSiCFz4Xb0h1Oh0prUYU2ukyWO8gG892V0UMHIXCWqvdZ3wSctNwdWThg==
 
 solidity-parser@^0.4.0:
   version "0.4.0"
@@ -1899,10 +1899,10 @@ truffle-flattener@^1.2.5:
     truffle-resolver "^4.0.1"
     tsort "0.0.1"
 
-truffle-hdwallet-provider@^1.0.0-web3one.1:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/truffle-hdwallet-provider/-/truffle-hdwallet-provider-1.0.2.tgz#eb9ce2955e3a1fb8677ed3ad4949dfd9df913d73"
-  integrity sha512-skxwZDG541Qf077aA7VDWn9qhgr9/DjmbFJWLVR/oRrlmOYcIiNXviuBIZ5tZkE7JuFxMzHagkLPOreeko9G+g==
+truffle-hdwallet-provider@^1.0.2:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/truffle-hdwallet-provider/-/truffle-hdwallet-provider-1.0.3.tgz#4ae845f9b2de23f47c4f0fbc6ef2d4b13b494604"
+  integrity sha512-Lm4MrXHnWg8wHNUoumUBc8AhlCBg05x7wZA81JOFfO0j3QU53A/hhSfV7v8gANbRsvpF5Su0s3SNQGJjewtnYw==
   dependencies:
     any-promise "^1.3.0"
     bindings "^1.3.1"
@@ -1931,10 +1931,10 @@ truffle-resolver@^4.0.1:
     truffle-expect "0.0.3"
     truffle-provisioner "^0.1.0"
 
-truffle@^5.0.0-beta.2:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/truffle/-/truffle-5.0.1.tgz#bd4c3aa15201935c8e35506d9fbabd07814d2323"
-  integrity sha512-SCmbpZGUutMo1zwGPL+xEa80VC8FrnMFqsS/M1WTZUTsU7SrUO+CNuS9s0DDbFuWW8bMAH36YY/9mRwS1imZ/A==
+truffle@^5.0.2:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/truffle/-/truffle-5.0.3.tgz#ff54abdd3dba7ff0850356c0aae7c390d013e40b"
+  integrity sha512-XTR1SwWoxNGCBa8zWrv/4J8RNfclL6qhyAp+bfnv4AD3L7GEWziDQvcq5ufSKIPKnoK0a4y1O+EZOW5izyEaKg==
   dependencies:
     app-module-path "^2.2.0"
     mocha "^4.1.0"
